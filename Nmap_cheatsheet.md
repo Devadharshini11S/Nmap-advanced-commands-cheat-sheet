@@ -1,22 +1,4 @@
-
-
-
-ADVANCED NMAP COMMANDS CHEAT SHEET (WITH EXPLANATIONS)
-
-Table of Contents
-
-1. Basic Scanning
-                 2. Port Scanning Techniques
-                     3. Service & Version Detection
-4. OS Detection   
-              5. Timing and Performance
-        6. Firewall/IDS Evasion
-                      7. Nmap Scripting Engine (NSE)
-8. Output Options
-                  9. Miscellaneous & Advanced
-
-
-1. Basic Scanning
+--1. Basic Scanning
 
 1. `nmap 192.168.1.10`  
    Default TCP SYN scan on target.
@@ -49,7 +31,7 @@ Table of Contents
     Xmas scan (sets FIN, PSH, URG flags).
 
 
-2. Port Scanning Techniques
+--2. Port Scanning Techniques
 
 11. `nmap -p 80,443 192.168.1.10`  
     Scan specific ports.
@@ -82,7 +64,7 @@ Table of Contents
     Service version detection on all ports.
 
 
-3. Service & Version Detection
+--3. Service & Version Detection
 
 21. `nmap -sV 192.168.1.10`  
     Service/version detection.
@@ -99,7 +81,7 @@ Table of Contents
 25. `nmap --version-trace 192.168.1.10`  
     Show version detection debugging info.
 
-4. OS Detection
+--4. OS Detection
 
 26. `nmap -O 192.168.1.10`  
     Enable OS detection.
@@ -116,7 +98,7 @@ Table of Contents
 30. `nmap --fuzzy 192.168.1.10`  
     Use fuzzy logic for OS detection.
 
- 5. Timing and Performance
+--5. Timing and Performance
 
 31. `nmap -T0 192.168.1.10`  
     Paranoid timing (slowest, stealthiest).
@@ -136,7 +118,7 @@ Table of Contents
 36. `nmap -T5 192.168.1.10`  
     Insane timing (fastest, less reliable).
 
-6. Firewall/IDS Evasion
+--6. Firewall/IDS Evasion
 
 37. `nmap -D RND:5 192.168.1.10`  
     Use 5 random decoy IPs.
@@ -159,7 +141,7 @@ Table of Contents
 43. `nmap --data-length 50 192.168.1.10`  
     Append 50 bytes random data to packets.
 
-7. Nmap Scripting Engine (NSE)
+--7. Nmap Scripting Engine (NSE)
 
 44. `nmap --script default 192.168.1.10`  
     Run default NSE scripts.
@@ -182,7 +164,7 @@ Table of Contents
 50. `nmap --script ftp-anon 192.168.1.10`  
     Check for anonymous FTP access.
 
-8. Output Options
+--8. Output Options
 
 51. `nmap -oN output.txt 192.168.1.10`  
     Save normal output.
@@ -196,7 +178,7 @@ Table of Contents
 54. `nmap -oA output 192.168.1.10`  
     Save in all formats (normal, XML, grepable).
 
-9. Miscellaneous & Advanced
+--9. Miscellaneous & Advanced
 
 55. `nmap --traceroute 192.168.1.10`  
     Trace network path to target.
